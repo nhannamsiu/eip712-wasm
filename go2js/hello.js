@@ -34,7 +34,7 @@ async function main() {
   go.env = Object.assign({ TMPDIR: require("os").tmpdir() }, process.env);
   go.exit = process.exit;
 
-  const { instance, module } = await WebAssembly.instantiate(fs.readFileSync("./eip712.wasm"), go.importObject)
+  const { instance, module } = await WebAssembly.instantiate(fs.readFileSync("./hello.wasm"), go.importObject)
   go.run(instance)
   await sleep(1)
   globalThis["Print"](1,2,3)

@@ -6,7 +6,6 @@ import (
 )
 
 func main() {
-	fmt.Println("My Web Assembly")
 	js.Global().Set("Print", Print())
 	select {}
 }
